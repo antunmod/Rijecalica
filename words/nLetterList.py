@@ -11,7 +11,6 @@ for length in lengths:
 			nLetterWord = line[0:length]
 			if (previous != nLetterWord):
 				previous = nLetterWord
-				print(nLetterWord)
 				o.write(nLetterWord + "\n")
 	o.close()
 f.close()
