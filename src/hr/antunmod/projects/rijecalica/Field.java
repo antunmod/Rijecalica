@@ -2,7 +2,7 @@ package hr.antunmod.projects.rijecalica;
 
 public class Field {
 
-    private boolean searched;
+    private boolean used;
     private char letter;
     private Index index;
 
@@ -11,12 +11,12 @@ public class Field {
         this.index = new Index(row, col);
     }
 
-    boolean isSearched() {
-        return searched;
+    boolean isUsed() {
+        return used;
     }
 
-    void setSearched(boolean searched) {
-        this.searched = searched;
+    void setUsed(boolean used) {
+        this.used = used;
     }
 
     char getLetter() {

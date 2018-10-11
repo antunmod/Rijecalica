@@ -17,7 +17,7 @@ public class Board {
             return;
         }
 
-        field.setSearched(true);
+        field.setUsed(true);
 
         if (word.length() > 4) {
             Main.words.add(word);
@@ -28,14 +28,14 @@ public class Board {
             searchTheBoard(word + String.valueOf(neighbour.getLetter()), neighbour);
         }
 
-        field.setSearched(false);
+        field.setUsed(false);
 
     }
 
     private boolean searchIsDone() {
         for (int row = NUMBER_OF_ROWS_AND_COLUMNS - 1; row >= 0; --row) {
             for (int col = NUMBER_OF_ROWS_AND_COLUMNS - 1; col >= 0; --col) {
-                if (!fields[row][col].isSearched()) {
+                if (!fields[row][col].isUsed()) {
                     return false;
                 }
             }
@@ -55,22 +55,22 @@ public class Board {
         int tmpRow, tmpCol;
 
         tmpCol = col - 1;
-        if (fieldIsInsideRange(row, tmpCol) && !fields[row][tmpCol].isSearched()) {
+        if (fieldIsInsideRange(row, tmpCol) && !fields[row][tmpCol].isUsed()) {
             neighbourIndexList.add(fields[row][tmpCol]);
         }
 
         tmpCol = col + 1;
-        if (fieldIsInsideRange(row, tmpCol) && !fields[row][tmpCol].isSearched()) {
+        if (fieldIsInsideRange(row, tmpCol) && !fields[row][tmpCol].isUsed()) {
             neighbourIndexList.add(fields[row][tmpCol]);
         }
 
         tmpRow = row - 1;
-        if (fieldIsInsideRange(tmpRow, col) && !fields[tmpRow][col].isSearched()) {
+        if (fieldIsInsideRange(tmpRow, col) && !fields[tmpRow][col].isUsed()) {
             neighbourIndexList.add(fields[tmpRow][col]);
         }
 
         tmpRow = row + 1;
-        if (fieldIsInsideRange(tmpRow, col) && !fields[tmpRow][col].isSearched()) {
+        if (fieldIsInsideRange(tmpRow, col) && !fields[tmpRow][col].isUsed()) {
             neighbourIndexList.add(fields[tmpRow][col]);
         }
 
@@ -80,6 +80,5 @@ public class Board {
     private boolean fieldIsInsideRange(int row, int col) {
         return row >= 0 && row < NUMBER_OF_ROWS_AND_COLUMNS && col >= 0 && col < NUMBER_OF_ROWS_AND_COLUMNS;
     }
-
 
 }
