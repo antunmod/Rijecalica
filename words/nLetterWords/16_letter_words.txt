@@ -127,19 +127,6 @@ civilizacijskima
 civilizacijskoga
 civiliziranijima
 crkvenoslavenski
-četverogodišnjem
-četverogodišnjih
-četverogodišnjim
-četverogodišnjoj
-četverogodišnjom
-četveromjesečnih
-četveromjesečnim
-četveromjesečnoj
-četveromjesečnom
-četvrtgodišnjima
-čovjekoljubivija
-čovjekoljubivima
-čovjekoljubivost
 daktilografkinja
 daktilografkinji
 daktilografkinju
@@ -2217,5 +2204,3 @@ zemljoposjednika
 zemljoposjedniku
 zemljoradničkima
 zloupotrebljenoj
-zvučnoelektrički
-žandarmerijskima
